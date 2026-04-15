@@ -10,9 +10,9 @@ const Navbar = () => {
 
   const link = (
        <>
-       <li > <NavLink className={({isActive}) => `${isActive ? 'bg-green-800' : ''} flex justify-center items-center md:px-5 md:py-3 gap-2 rounded-sm`} to= "/" > <IoHomeOutline/> Home</NavLink> </li>
-       <li > <NavLink className={({isActive}) => `${isActive ? 'bg-green-800' : ''} flex justify-center items-center md:px-5 md:py-3 gap-2 rounded-sm`} to="/Timeline" > <CiTimer/> Timeline</NavLink> </li>
-       <li > <NavLink className={({isActive}) => `${isActive ? 'bg-green-800' : ''} flex justify-center items-center md:px-5 md:py-3 gap-2 rounded-sm`} to= "/Status" > <FaChartLine/> Status</NavLink></li>
+       <li > <NavLink className={({isActive}) => `${isActive ? 'bg-green-800' : ''} flex justify-center items-center md:px-5 md:py-3 gap-2 rounded-sm text-white font-semibold`} to= "/" > <IoHomeOutline/> Home</NavLink> </li>
+       <li > <NavLink className={({isActive}) => `${isActive ? 'bg-green-800' : ''} flex justify-center items-center md:px-5 md:py-3 gap-2 rounded-sm text-white font-semibold`} to="/Timeline" > <CiTimer/> Timeline</NavLink> </li>
+       <li > <NavLink className={({isActive}) => `${isActive ? 'bg-green-800' : ''} flex justify-center items-center md:px-5 md:py-3 gap-2 rounded-sm text-white font-semibold`} to= "/Status" > <FaChartLine/> Status</NavLink></li>
          
        </>
   )
@@ -33,7 +33,7 @@ const Navbar = () => {
         {link}
       </ul>
     </div>
-    <a className=" font-bold text-3xl ">KinKeeper</a>
+    <a className=" font-bold text-3xl  "> <span className=' text-green-700 '>Keen</span><span className=' text-green-500'>Keeper</span> </a>
   </div>
   
   <div className="navbar-center hidden lg:flex">
