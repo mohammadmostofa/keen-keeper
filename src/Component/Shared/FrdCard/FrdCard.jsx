@@ -13,7 +13,7 @@ const LastDaysAge = Math.floor((newDate - lastMonth) / (1000*60*60*24))  ;
     <div >
 
       <div className=" flex flex-col justify-center items-center p-5 
-      shadow-base-100  rounded-sm bg-gray-800 shadow-md ">
+     rounded-sm bg-gray-800 drop-shadow-2xl  shadow-indigo-600 ">
   <figure className="px-10 pt-10 ">
     <img
       src={card.picture}

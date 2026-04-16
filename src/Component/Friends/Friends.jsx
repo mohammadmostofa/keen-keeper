@@ -10,11 +10,11 @@ const Friends = ({FriendsCards}) => {
 
   return (
          
+     <div>
 
-    
+      <h1 className=' container mx-auto text-4xl font-bold mt-40 '>Your Friends</h1>
 
-
-       <div className=' grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 container mx-auto justify-between items-center gap-5 mt-15 py-10 '>            
+ <div className=' grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 container mx-auto justify-between items-center gap-5 py-10 '>            
           <Suspense fallback = {<span className="loading loading-spinner text-primary"></span>}>
 
                 {
@@ -22,14 +22,10 @@ const Friends = ({FriendsCards}) => {
              }
              
           </Suspense>
-
-  
-
-
-
-
     </div>
 
+
+     </div>  
 
   );
 };
