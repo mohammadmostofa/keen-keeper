@@ -1,7 +1,14 @@
 import React, { Suspense } from 'react';
 import Banner from '../../Banner/Banner';
 
+
 const FrdCard = ({card}) => {
+   
+  const lastMonth = new Date(card.interactions[card.interactions.length - 1]); //last month out math
+  const newDate = new Date(); //new month out math
+
+const LastDaysAge = Math.floor((newDate - lastMonth) / (1000*60*60*24))  ;
+
   return (
     <div >
 
@@ -16,6 +23,7 @@ const FrdCard = ({card}) => {
 
   <div className="card-body items-center text-center space-y-3 ">
     <h2 className="card-title"> {card.name} </h2>
+    <p> {LastDaysAge}d ago </p>
     <p className='text-2xl font-bold '> {card.days_since_contact} </p>
      
      <div className='flex  justify-center items-center gap-2 '>
