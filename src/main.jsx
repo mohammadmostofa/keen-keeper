@@ -8,6 +8,7 @@ import Status from './Pages/Status/Status.jsx'
 import Timeline from './Pages/Timeline/Timeline'
 import MainLayout from './MainLayout/MainLayout'
 import ErrorPage from './Pages/ErrorPage/ErrorPage.jsx'
+import SIngleCard from './Pages/SingleCard/SingleCard.jsx'
 
 const router = createBrowserRouter([
   
@@ -31,7 +32,12 @@ const router = createBrowserRouter([
   {
     path:'/Status',
     element: <Status></Status>
+  },
 
+  {
+       path:'/SIngleCard/:id',
+       element: <SIngleCard></SIngleCard>,
+       loader:()=> fetch('/Friends.json'),
   },
 
   {

@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
 import Banner from '../../Banner/Banner';
+import { Link } from 'react-router';
 
 
 const FrdCard = ({card}) => {
@@ -7,10 +8,10 @@ const FrdCard = ({card}) => {
   const lastMonth = new Date(card.interactions[card.interactions.length - 1]); //last month out math
   const newDate = new Date(); //new month out math
 
-const LastDaysAge = Math.floor((newDate - lastMonth) / (1000*60*60*24))  ;
+const LastDaysAge = Math.floor((newDate - lastMonth) / (1000*60*60*24));
 
   return (
-    <div >
+    <Link to={`/SIngleCard/${card.id}`} >
 
       <div className=" flex flex-col justify-center items-center p-5 
      rounded-sm bg-gray-800 drop-shadow-2xl  shadow-indigo-600 ">
@@ -28,8 +29,8 @@ const LastDaysAge = Math.floor((newDate - lastMonth) / (1000*60*60*24))  ;
      
      <div className='flex  justify-center items-center gap-2 '>
          {
-             card.tags.map((tag,inx) => <h4 className='bg-green-200  text-black p-3 rounded-sm font-semibold' key={inx} tag={tag} > {tag} </h4> )
-         }
+              card.tags.map((tag,inx) => <h4 className='bg-green-200  text-black p-3 rounded-sm font-semibold' key={inx} tag={tag} > {tag} </h4> )
+        }
      </div>
 
     <div className="card-actions">
@@ -39,11 +40,11 @@ const LastDaysAge = Math.floor((newDate - lastMonth) / (1000*60*60*24))  ;
     </div>
   </div>
 </div>
+  
 
-         
-
-    </div>
+    </Link>
   );
+  
 };
 
 export default FrdCard;

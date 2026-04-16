@@ -7,8 +7,7 @@ const FriendsPromise = fetch('/Friends.json').then(res=> res.json())
 
 const Home = () => {
 
- const FriendsCards = use(FriendsPromise)
-  console.log(FriendsCards , 'friendsCard')
+ const FriendsCards = use(FriendsPromise);
 
   return (
     <div>
