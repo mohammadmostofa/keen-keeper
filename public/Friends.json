@@ -9,7 +9,8 @@
     "bio": "Met in university. Love hiking together.",
     "goal": 14,
     "next_due_date": "2026-04-20",
-    "interactions": ["2026-04-05", "2026-03-10"]
+    "interactions": ["2026-04-05", "2026-03-10"],
+    "actions": ["call", "text", "video"]
   },
   {
     "id": 2,
@@ -21,7 +22,8 @@
     "bio": "Colleague from office project.",
     "goal": 10,
     "next_due_date": "2026-04-25",
-    "interactions": ["2026-04-12", "2026-04-01"]
+    "interactions": ["2026-04-12", "2026-04-01"],
+    "actions": ["call", "text", "video"]
   },
   {
     "id": 3,
@@ -33,7 +35,8 @@
     "bio": "Gym partner and fitness enthusiast.",
     "goal": 7,
     "next_due_date": "2026-04-15",
-    "interactions": ["2026-03-25"]
+    "interactions": ["2026-03-25"],
+    "actions": ["call", "text", "video"]
   },
   {
     "id": 4,
@@ -45,7 +48,8 @@
     "bio": "Cousin, very close relation.",
     "goal": 5,
     "next_due_date": "2026-04-28",
-    "interactions": ["2026-04-14"]
+    "interactions": ["2026-04-14"],
+    "actions": ["call", "text", "video"]
   },
   {
     "id": 5,
@@ -57,7 +61,8 @@
     "bio": "Important business client.",
     "goal": 10,
     "next_due_date": "2026-04-18",
-    "interactions": ["2026-03-20"]
+    "interactions": ["2026-03-20"],
+    "actions": ["call", "text", "video"]
   },
   {
     "id": 6,
@@ -69,7 +74,8 @@
     "bio": "School friend, loves music.",
     "goal": 14,
     "next_due_date": "2026-04-22",
-    "interactions": ["2026-04-02"]
+    "interactions": ["2026-04-02"],
+    "actions": ["call", "text", "video"]
   },
   {
     "id": 7,
@@ -81,7 +87,8 @@
     "bio": "Friendly neighbor, always helpful.",
     "goal": 20,
     "next_due_date": "2026-04-10",
-    "interactions": ["2026-02-28"]
+    "interactions": ["2026-02-28"],
+    "actions": ["call", "text", "video"]
   },
   {
     "id": 8,
@@ -93,7 +100,8 @@
     "bio": "Met through online community.",
     "goal": 7,
     "next_due_date": "2026-04-27",
-    "interactions": ["2026-04-10"]
+    "interactions": ["2026-04-10"],
+    "actions": ["call", "text", "video"]
   },
   {
     "id": 9,
@@ -105,7 +113,8 @@
     "bio": "Classmate from university.",
     "goal": 12,
     "next_due_date": "2026-04-16",
-    "interactions": ["2026-03-29"]
+    "interactions": ["2026-03-29"],
+    "actions": ["call", "text", "video"]
   },
   {
     "id": 10,
@@ -117,6 +126,7 @@
     "bio": "Guides me in career decisions.",
     "goal": 5,
     "next_due_date": "2026-04-30",
-    "interactions": ["2026-04-15"]
+    "interactions": ["2026-04-15"],
+    "actions": ["call", "text", "video"]
   }
 ]

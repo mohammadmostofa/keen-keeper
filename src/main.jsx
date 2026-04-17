@@ -1,4 +1,4 @@
-import { StrictMode } from 'react'
+import { StrictMode, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter } from 'react-router'
@@ -9,6 +9,8 @@ import Timeline from './Pages/Timeline/Timeline'
 import MainLayout from './MainLayout/MainLayout'
 import ErrorPage from './Pages/ErrorPage/ErrorPage.jsx'
 import SIngleCard from './Pages/SingleCard/SingleCard.jsx'
+import ContextProvider from './Context/ContextProvider.jsx'
+import { ToastContainer } from 'react-toastify'
 
 const router = createBrowserRouter([
   
@@ -59,6 +61,13 @@ const router = createBrowserRouter([
 // root connector system
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <ContextProvider>
+
+ <Suspense fallback={<span className="loading loading-spinner text-primary"></span>} >
 <RouterProvider router={router} ></RouterProvider>
+ </Suspense>
+       
+   <ToastContainer />
+    </ContextProvider>
   </StrictMode>,
 )

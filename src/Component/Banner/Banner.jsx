@@ -26,24 +26,24 @@ const Banner = ({FriendsCards}) => {
 
 <div className='grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 justify-between items-center gap-5 md:gap-6 mt-6'>
 
-   <div className='bg-white text-black p-10 md:p-20 rounded-md  '>
-    <h3 className=' font-bold text-3xl'> {FriendsCards?.length} </h3>
-    <h4 className='font-semibold text-xl '>Friends</h4>
+   <div className='bg-gray-800 text-white p-10 md:p-20 rounded-md  '>
+    <h3 className='   font-bold text-3xl'> {FriendsCards?.length} </h3>
+    <h4 className='  font-semibold text-xl '>Friends</h4>
    </div>
 
 
-   <div className='bg-white text-black p-10 md:p-20 rounded-md '>
+   <div className=' bg-gray-800 text-white p-10 md:p-20 rounded-md '>
     <h3 className=' font-bold text-3xl  '> {activeStatus} </h3>
     <h4 className='font-semibold text-xl text-nowrap '>On track</h4>
    </div>
 
 
-   <div className='bg-white text-black p-10 md:p-20 rounded-md '>
+   <div className='bg-gray-800 text-white p-10 md:p-20 rounded-md '>
     <h3 className=' font-bold text-3xl  '> {NeedAtention} </h3>
     <h4 className='font-semibold text-xl text-nowrap '>Need Attension</h4>
    </div>
 
-   <div className='bg-white text-black p-10 md:p-20 rounded-md '>
+   <div className='bg-gray-800 text-white p-10 md:p-20 rounded-md '>
     <h3 className=' font-bold text-3xl  '> {newDate} </h3>
     <h4 className='font-semibold text-xl '>Interactions</h4>
    </div>

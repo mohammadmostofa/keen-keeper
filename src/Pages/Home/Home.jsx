@@ -1,4 +1,4 @@
-import React, { use } from 'react';
+import React, { Suspense, use } from 'react';
 import Banner from '../../Component/Banner/Banner';
 import Friends from '../../Component/Friends/Friends';
 
@@ -11,9 +11,12 @@ const Home = () => {
 
   return (
     <div>
+  
+    <Suspense>
              <Banner FriendsCards={FriendsCards} ></Banner>
-
              <Friends FriendsCards={FriendsCards} ></Friends>
+    </Suspense>
+   
     </div>
   );
 };

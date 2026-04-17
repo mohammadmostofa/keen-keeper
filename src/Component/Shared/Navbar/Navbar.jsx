@@ -36,8 +36,8 @@ const Navbar = () => {
     <a className=" font-bold text-3xl  "> <span className=' text-green-700 '>Keen</span><span className=' text-green-500'>Keeper</span> </a>
   </div>
   
-  <div className="navbar-center hidden lg:flex">
-    <ul className=" flex justify-center items-center space-x-4 ">
+  <div className="navbar-center hidden md:flex ">
+    <ul className=" hidden md:flex justify-center items-center space-x-4 ">
 
           {link}
 

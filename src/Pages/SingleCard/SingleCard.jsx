@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaBell, FaVideo } from 'react-icons/fa';
 import { FiArchive } from 'react-icons/fi';
 import { IoMdText } from 'react-icons/io';
 import { MdDelete, MdPhoneCallback } from 'react-icons/md';
 import { useLoaderData, useParams } from 'react-router';
+import { ContextCard } from '../../Context/ContextProvider';
 
 const SIngleCard = () => {
   
@@ -13,27 +14,37 @@ console.log(id);
  // receive data by useLoaderData
  const CardDetails = useLoaderData();
  console.log(CardDetails);
-
+ 
+ 
+ 
  // find mathod 
  const Card = CardDetails?.find( (card) => card.id === Number(id));
  
- const { name, picture, email,status, tags, bio, goal, next_due_date, interactions} =  Card;
+ const { name, picture, email,status, tags, bio, goal, next_due_date,interactions} =  Card || {};
+ 
+//  context
 
+const {handleAction} = useContext(ContextCard);
+ 
  //  day count 
-  const LastMonth = new Date(Card.interactions[Card.interactions.length - 1] );
+  const LastMonth = new Date(interactions[interactions.length - 1] );
   const NewMonth = new Date();
   const TotalDays = Math.floor((NewMonth - LastMonth) / (1000 * 60 * 60 * 24))
 
 if(!Card){
   return
-}
+};
+
+
+
 
   return (
 
      <div>
 
           
-          <div className='bg-gray-800 p-5 drop-shadow-lg grid grid-cols-1 md:flex justify-center items-center gap-5 container mx-auto'>
+          <div className='bg-gray-800 p-5 drop-shadow-lg grid grid-cols-1 md:flex justify-center items-center gap-4 md:gap-y-5 md:gap-x-15 container mx-auto py-12'>
+
 {/* part one */}
 <div>
 
@@ -48,14 +59,14 @@ if(!Card){
 
    {/* status */}
    <div className="flex justify-center items-center pt-5 ">
-           <h3 className= {` ${Card.status == "active" ? 
+           <h3 className= {`${Card.status == "active" ? 
            'bg-green-500': Card.status == "overdue" ? 'bg-yellow-500' 
-           : 'bg-red-500'} px-5 rounded-4xl text-black `} > {Card.status} </h3>
+           : 'bg-red-500'} px-5 rounded-4xl text-black `} > {status} </h3>
     </div>
 
          <div className='flex  justify-center items-center gap-2 '>
          {
-              Card.tags.map((tag,inx) => <h4 className='bg-green-200  text-black px-6 mt-5 rounded-4xl gap-5'
+              tags.map((tag,inx) => <h4 className='bg-green-200  text-black px-6 mt-5 rounded-4xl gap-5'
                key={inx} tag={tag} > {tag} </h4> )
         }
      </div>
@@ -112,9 +123,11 @@ if(!Card){
 
                  <div className=' grid grid-cols-1 md:flex justify-between items-center py-4 px-2 gap-5  '>
 
-                       <div className='flex flex-col justify-center items-center border-2 border-gray-800 py-12 space-y-4 w-full h-full rounded-2xl shadow drop-shadow-sm ' > <span></span> <MdPhoneCallback /><span>Call</span> </div>
-                       <div className='flex flex-col justify-center items-center border-2 border-gray-800 py-12 space-y-4 w-full h-full rounded-2xl shadow drop-shadow-sm'> <span></span><IoMdText /><span>Text</span> </div>
-                       <div className='flex flex-col justify-center items-center border-2 border-gray-800 py-12 space-y-4 w-full h-full rounded-2xl shadow drop-shadow-sm'> <span></span><FaVideo /><span>video</span> </div>
+
+                       <div onClick={() =>handleAction(Card, "call")}   className={`  flex flex-col justify-center items-center border-2 border-gray-800 py-12 space-y-4 w-full h-full rounded-2xl shadow drop-shadow-sm`}> <span></span> <MdPhoneCallback /><span>Call</span> </div>
+                       <div onClick={() =>handleAction(Card, "text")}   className={` flex flex-col justify-center items-center border-2 border-gray-800 py-12 space-y-4 w-full h-full rounded-2xl shadow drop-shadow-sm`}>  <span></span><IoMdText /><span>Text</span> </div>
+                       <div onClick={() =>handleAction(Card, "video")}  className={` flex flex-col justify-center items-center border-2 border-gray-800 py-12 space-y-4 w-full h-full rounded-2xl shadow drop-shadow-sm`}>  <span></span><FaVideo /><span>video</span> </div>
+                        
 
 
 

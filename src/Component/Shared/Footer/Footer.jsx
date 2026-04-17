@@ -24,7 +24,7 @@ const Footer = () => {
             </div>
           </div>
   
-  <aside className=' grid grid-cols-1 md:flex justify-between items-center w-full border-t pt-6 border-gray-950 px-2'>
+  <aside className=' grid grid-cols-1 md:flex justify-between items-center w-full border-t pt-5 border-gray-950'>
     <h4 className=' grid grid-cols-1  md:flex justify-center items-center ' > <span>Copyright © {new Date().getFullYear()} </span> <span> - © 2026 KeenKeeper. All rights reserved. </span></h4>
     <nav className='flex items-center space-x-4'>
       <a href="">Privacy Policy</a>
