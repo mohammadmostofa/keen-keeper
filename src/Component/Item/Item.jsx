@@ -15,6 +15,8 @@ const Item = ({card}) => {
                 <h3> <span className='text-green-500 font-bold'> {card.type} </span> with {card.name} </h3>
                 <h2> {card.time} </h2>
 
+                
+
           </div>
     </div>
   );
